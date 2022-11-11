@@ -28,7 +28,8 @@ export function Start() {
   const navigate = useNavigate();
 
   const goToSettingsPage = () => navigate({ pathname: PageRoutes.Settings });
-  const goToComputerPage = () => navigate({ pathname: PageRoutes.Computer });
+  const goToVersusComputerPage = () => navigate({ pathname: PageRoutes.VersusComputer });
+  const goToVersusPlayerPage = () => navigate({ pathname: PageRoutes.VersusPlayer });
 
   return (
     <Stack flexDirection="column" alignItems="center">
@@ -36,12 +37,12 @@ export function Start() {
 
       <br />
 
-      <Button isMaxWidth onClick={goToComputerPage}>
+      <Button isMaxWidth onClick={goToVersusComputerPage}>
         <RiComputerFill />
         Player Vs. Computer
       </Button>
 
-      <Button isMaxWidth disabled>
+      <Button isMaxWidth onClick={goToVersusPlayerPage}>
         <IoMdPerson />
         Player Vs. Player
       </Button>
