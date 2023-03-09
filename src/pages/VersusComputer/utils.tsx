@@ -1,5 +1,5 @@
 import { FaHandRock, FaHandScissors, FaHandPaper } from 'react-icons/fa';
-import { getRandomNumber } from 'utils/getRandomNumber';
+import { generateRandomNumber } from 'utils/generateRandomNumber';
 
 export enum Moves {
   Rock = 'Rock',
@@ -20,7 +20,7 @@ export const moveListLength = moveList.length;
 export const moveListLastIndex = moveListLength - 1;
 
 export function chooseRandomMove() {
-  const randomNumber = Math.floor(getRandomNumber({ maximum: moveListLength, minimum: 0 }));
+  const randomNumber = Math.floor(generateRandomNumber({ maximum: moveListLength, minimum: 0 }));
   const randomMove = moveList[randomNumber];
 
   return randomMove;
